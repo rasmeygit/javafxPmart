@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pmart.OrderProductFXMLController">
+   <children>
+      <TextField fx:id="txt_barcode" layoutX="14.0" layoutY="31.0" onKeyTyped="#handleBarcodeScan" prefHeight="25.0" prefWidth="189.0" promptText="Barcode" />
+      <TextField fx:id="txt_productName" layoutX="14.0" layoutY="68.0" prefHeight="25.0" prefWidth="189.0" promptText="Product Name" />
+      <TextField fx:id="txt_priceOut" layoutX="14.0" layoutY="105.0" prefHeight="25.0" prefWidth="189.0" promptText="Price Out" />
+      <TextField fx:id="txt_qty" layoutX="14.0" layoutY="143.0" onAction="#handleOrder" prefHeight="25.0" prefWidth="189.0" promptText="Qty" />
+      <TextField fx:id="txt_invoiceNo" layoutX="412.0" layoutY="44.0" prefHeight="25.0" prefWidth="174.0" promptText="Invoice No" />
+      <DatePicker fx:id="OrderDate" layoutX="412.0" layoutY="14.0" promptText="Order Date" />
+      <Button fx:id="btn_enter" layoutX="217.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleEnter" text="Enter" />
+      <TableView fx:id="table_order" layoutX="14.0" layoutY="174.0" prefHeight="200.0" prefWidth="577.0">
+        <columns>
+          <TableColumn fx:id="column_no" prefWidth="34.0" text="No" />
+          <TableColumn fx:id="column_pid" prefWidth="87.0" text="Product_ID" />
+            <TableColumn fx:id="column_barcode" prefWidth="107.0" text="Barcode" />
+            <TableColumn fx:id="column_qty" minWidth="0.0" prefWidth="0.0" text="Qty" />
+            <TableColumn fx:id="column_product" prefWidth="119.0" text="Product_Name" />
+            <TableColumn fx:id="column_price" prefWidth="85.0" text="Price" />
+            <TableColumn fx:id="column_qty" prefWidth="70.0" text="QTY" />
+            <TableColumn fx:id="cokumn_amount" prefWidth="75.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbl_grandTotal" layoutX="556.0" layoutY="147.0" text="0.0" />
+      <Label layoutX="457.0" layoutY="147.0" text="Grand Total" />
+      <Button fx:id="btn_PrintInvoice" layoutX="509.0" layoutY="93.0" mnemonicParsing="false" onAction="#handlePrintInvoice" text="Print Invoice" />
+   </children>
+</AnchorPane>

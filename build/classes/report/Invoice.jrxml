@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="421" pageHeight="595" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="909c1c8c-c30c-4c64-946a-7e32a622ee42">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="cashier" class="java.lang.String"/>
+	<parameter name="grandTotal" class="java.lang.String"/>
+	<parameter name="invoiceNo" class="java.lang.String"/>
+	<field name="pname" class="java.lang.String"/>
+	<field name="price" class="java.lang.String"/>
+	<field name="pqty" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="116" y="19" width="162" height="31" uuid="ff78bf43-0b10-436a-a3be-f5d57d391256"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PlayMart]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="0" width="142" height="68" uuid="3009aa38-5d82-4287-b88b-84cbb63b841f"/>
+				<imageExpression><![CDATA["D:\\Java2016\\NetbeansProjects\\Pmart\\src\\image\\mart.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="222" y="0" width="49" height="20" uuid="606c41de-3ccb-4461-96c0-405929b12952"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Cashier]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="278" y="0" width="100" height="20" uuid="c351e00b-f547-486b-955c-502a3ba5d090"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cashier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="3" width="208" height="20" uuid="1023a88a-df9a-45af-8ad4-cf91b391801a"/>
+				<textFieldExpression><![CDATA[$P{invoiceNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="95" height="20" backcolor="#CCFFFF" uuid="272d994e-d44c-4b54-896e-f61bb83f2f29"/>
+				<text><![CDATA[productName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="95" y="0" width="95" height="20" backcolor="#CCFFFF" uuid="533b10a1-1687-4760-a2da-f06fc8e05f54"/>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="190" y="0" width="95" height="20" backcolor="#CCFFFF" uuid="9ed094d1-ae00-44ef-bf7b-b270d77d1d39"/>
+				<text><![CDATA[qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="285" y="0" width="95" height="20" backcolor="#CCFFFF" uuid="35c77899-a178-4e00-ad63-1a86166c1721"/>
+				<text><![CDATA[amount($)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="378" height="1" uuid="b927e5b0-bab3-49f1-8fbb-4284b79be7f1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="95" height="20" uuid="779e6421-2e75-496a-a585-dccef1e53195"/>
+				<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="95" height="20" uuid="aaca5ac5-3a32-40ba-850b-9c0e31b6a20e"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="95" height="20" uuid="768b2ee7-fe65-4d9f-bf28-8f8af02a9e4b"/>
+				<textFieldExpression><![CDATA[$F{pqty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="95" height="20" uuid="e9bc644b-0a50-4f3a-89c5-6237fe7bb1d2"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="10" width="100" height="20" uuid="1afe3b63-a96b-473e-8874-62cf7d612201"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[GrandTotal ($)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="276" y="10" width="100" height="20" uuid="e243bd4c-e9c2-42aa-b671-18c2a014ab98"/>
+				<textFieldExpression><![CDATA[$P{grandTotal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="0" width="378" height="1" uuid="5c4aebb6-3538-444a-960f-110d39ea9875"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

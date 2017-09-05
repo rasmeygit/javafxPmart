@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="478.0" prefWidth="907.0" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pmart.FXMLDocumentController">
+    <children>
+        <Button fx:id="btn_addProduct" layoutX="246.0" layoutY="318.0" onAction="#handleAddProduct" text="Add Product" />
+      <TextField fx:id="txt_barcode" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" promptText="Barcode" />
+      <TextField fx:id="txt_priceIn" layoutX="14.0" layoutY="88.0" prefHeight="25.0" prefWidth="200.0" promptText="PriceIn" />
+      <TextField fx:id="txt_product" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" promptText="Product Name" />
+      <TextField fx:id="txt_priceOut" layoutX="14.0" layoutY="124.0" prefHeight="25.0" prefWidth="200.0" promptText="PriceOut" />
+      <TableView fx:id="tableProduct" layoutX="342.0" layoutY="12.0" prefHeight="249.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="columnBarcode" prefWidth="116.0" text="Barcode" />
+          <TableColumn fx:id="columnProductName" prefWidth="98.0" text="ProductName" />
+            <TableColumn fx:id="columnPriceIn" prefWidth="103.0" text="PriceIn" />
+            <TableColumn fx:id="columnPriceOut" prefWidth="71.0" text="PriceOut" />
+            <TableColumn fx:id="columnQty" prefWidth="75.0" text="Qty" />
+            <TableColumn fx:id="columnDateIn" prefWidth="77.0" text="DateIn" />
+        </columns>
+      </TableView>
+      <Label fx:id="error_barcode" layoutX="136.0" layoutY="45.0" />
+      <Label fx:id="error_product" layoutX="136.0" layoutY="92.0" />
+      <Label fx:id="error_priceIn" layoutX="136.0" layoutY="148.0" />
+      <Label fx:id="error_priceOut" layoutX="136.0" layoutY="195.0" />
+      <Button fx:id="btn_UpdateProduct" layoutX="398.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleUpdateProduct" prefHeight="25.0" prefWidth="99.0" text="Update Product" />
+      <Button fx:id="btn_DeleteProduct" layoutX="502.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleDeleteProduct" prefHeight="25.0" prefWidth="77.0" text="Delete" />
+      <TextField fx:id="txt_search" layoutX="340.0" layoutY="270.0" prefHeight="25.0" prefWidth="200.0" promptText="Search Product" />
+      <Button fx:id="btn_clear" layoutX="342.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+      <TextField fx:id="txt_qty" layoutX="14.0" layoutY="165.0" prefHeight="25.0" prefWidth="200.0" promptText="Qty" />
+      <Label fx:id="error_qty" layoutX="133.0" layoutY="244.0" />
+      <DatePicker fx:id="dateIn_Picker" layoutX="11.0" layoutY="212.0" prefHeight="25.0" prefWidth="206.0" promptText="Product DateIn" />
+      <Button fx:id="btn_order" layoutX="569.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleOrder" text="Order" />
+      <Button fx:id="btnBrowser" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleBrowser" text="Browser" />
+      <ImageView fx:id="imageView" fitHeight="178.0" fitWidth="200.0" layoutX="14.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

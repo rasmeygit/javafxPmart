@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.OrderProductFXMLController">
+   <children>
+      <TextField fx:id="txt_barcode" layoutX="23.0" layoutY="32.0" onKeyTyped="#handleScanProduct" prefHeight="25.0" prefWidth="182.0" promptText="Barcode" />
+      <TextField fx:id="txt_productName" layoutX="23.0" layoutY="69.0" prefHeight="25.0" prefWidth="182.0" promptText="Product Name" />
+      <TextField fx:id="txt_priceOut" layoutX="21.0" layoutY="107.0" prefHeight="25.0" prefWidth="182.0" promptText="Price" />
+      <TextField fx:id="txt_qty" layoutX="23.0" layoutY="144.0" onAction="#hanldeOrder" prefHeight="25.0" prefWidth="182.0" promptText="Qty" />
+      <TableView fx:id="table_order" layoutX="23.0" layoutY="177.0" prefHeight="200.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="column_no" prefWidth="75.0" text="No" />
+          <TableColumn fx:id="column_pid" prefWidth="75.0" text="Product_ID" />
+            <TableColumn fx:id="column_barcode" prefWidth="75.0" text="Barcode" />
+            <TableColumn fx:id="column_productName" prefWidth="86.0" text="Product_Name" />
+            <TableColumn fx:id="colum_price" prefWidth="87.0" text="Price" />
+            <TableColumn fx:id="column_qty" prefWidth="84.0" text="Qty" />
+            <TableColumn fx:id="column_amount" prefWidth="87.0" text="Amount" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_invoiceNo" layoutX="419.0" layoutY="14.0" prefHeight="25.0" prefWidth="167.0" />
+      <DatePicker fx:id="orderdate" layoutX="416.0" layoutY="45.0" />
+   </children>
+</AnchorPane>
