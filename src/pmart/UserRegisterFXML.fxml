@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pmart.UserRegisterFXMLController">
+   <children>
+      <TextField fx:id="txtEmail" layoutX="34.0" layoutY="25.0" prefHeight="25.0" prefWidth="266.0" promptText="User Email" />
+      <PasswordField fx:id="txtPassword" layoutX="34.0" layoutY="67.0" prefHeight="25.0" prefWidth="266.0" promptText="Password" />
+      <PasswordField fx:id="txtConfirmPassword" layoutX="34.0" layoutY="105.0" prefHeight="25.0" prefWidth="266.0" promptText="Confirm Passwrod" />
+      <TextField fx:id="txtFirstName" layoutX="34.0" layoutY="145.0" prefHeight="25.0" prefWidth="266.0" promptText="First Name" />
+      <TextField fx:id="txtLastName" layoutX="34.0" layoutY="188.0" prefHeight="25.0" prefWidth="266.0" promptText="Last Name" />
+      <ComboBox fx:id="cboRole" layoutX="34.0" layoutY="229.0" prefHeight="25.0" prefWidth="266.0" promptText="Role Name" />
+      <Label fx:id="lblEmailError" layoutX="323.0" layoutY="29.0" text="invalid email message" textFill="#f80808" />
+      <Button fx:id="btnRegister" layoutX="125.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="38.0" prefWidth="86.0" text="Register" />
+      <Label fx:id="lblPasswordError" layoutX="323.0" layoutY="109.0" text="invalid password message" textFill="#f80808" />
+   </children>
+</AnchorPane>

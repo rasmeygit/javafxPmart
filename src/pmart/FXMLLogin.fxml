@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="155.0" prefWidth="362.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="pmart.FXMLLoginController">
+   <children>
+      <TextField fx:id="txt_email" layoutX="125.0" layoutY="24.0" prefHeight="25.0" prefWidth="221.0" />
+      <PasswordField fx:id="txt_password" layoutX="125.0" layoutY="65.0" prefHeight="25.0" prefWidth="221.0" />
+      <Label layoutX="27.0" layoutY="28.0" text="Email" />
+      <Label layoutX="27.0" layoutY="69.0" text="Password" />
+      <Button fx:id="btn_Login" layoutX="125.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="73.0" text="Login" />
+      <Button fx:id="btn_cancel" layoutX="210.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="90.0" text="Cancel" />
+   </children>
+</AnchorPane>
